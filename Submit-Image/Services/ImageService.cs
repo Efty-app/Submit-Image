@@ -25,12 +25,12 @@ namespace Submit_Image.Services
 
         public List<Image> GetImageById(List<string> id)
         {
-           return  _images.AsQueryable().Where(_images => id.Contains(_images.Id)).ToList();
+           return  _images.AsQueryable().Where(Img => id.Contains(Img.Id)).ToList();
         }
 
         public List<Image> GetImageByGUId(List<string> guid)
         {
-            return _images.AsQueryable().Where(_images => guid.Contains(_images.GUID)).ToList();
+            return _images.AsQueryable().Where(Img => guid.Contains(Img.GUID)).ToList();
         }
 
 
